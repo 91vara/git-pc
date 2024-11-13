@@ -1,11 +1,11 @@
-FROM python:3.8-slim
+SUDO FROM python:3.8-slim
 
-WORKDIR /app
+SUDO WORKDIR /app
 
-COPY . .
+SUDO COPY . .
 
-RUN pip install --no-cache-dir -r requirements.txt 
+SUDO RUN pip install --no-cache-dir -r requirements.txt 
 
-EXPOSE 7000
+SUDO EXPOSE 7000
 
-CMD [ "python","app.py" ]
+SUDO CMD [ "python","app.py" ]
