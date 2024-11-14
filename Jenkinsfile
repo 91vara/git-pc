@@ -26,7 +26,7 @@ pipeline {
                     sh "docker rm my-nginx || true"
 
                     // Run the Docker container on localhost
-                    sh "docker run -d -p 8080:80 --name my-nginx my-nginx:latest"
+                    sh "docker run -d -p 9898:80 --name my-nginx my-nginx:latest"
                 }
             }
         }
