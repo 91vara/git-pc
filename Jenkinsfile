@@ -13,7 +13,7 @@ pipeline {
             steps {
                 script {
                     // Build Docker image for NGINX container
-                    def image = docker.build("my-nginx:latest", ".")
+                    def image = docker.build("nginx:latest", ".")
                 }
             }
         }
@@ -22,8 +22,8 @@ pipeline {
             steps {
                 script {
                     // Stop and remove any existing container
-                    sh "docker stop my-nginx || true"
-                    sh "docker rm my-nginx || true"
+                    sh "docker stop nginx || true"
+                    sh "docker rm nginx || true"
 
                     // Run the Docker container on localhost
                     sh "docker run -d -p 9898:80 --name my-nginx my-nginx:latest"
