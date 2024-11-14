@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout code from the Git repository
-                git 'https://github.com/your-repo/nginx-docker' // Replace with your repo URL
+                git 'https://github.com/91vara/git-pc.git' // Replace with your repo URL
             }
         }
 
